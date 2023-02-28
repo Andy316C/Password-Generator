@@ -11,7 +11,7 @@ function generatePassword(){
   if(com === "L"){
     var lengths = prompt("How many letters would you like to have");
     var specialChar =  prompt("Would you like to include special characters:\n Y = yes N= no");
-    var upperLower = prompt("Please Enter: /nU for upper case OR /nL for lower case OR B for both");
+    var upperLower = prompt("Please Enter: \nU for upper case OR \nL for lower case OR B for both");
     var alphabet= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     var alphabet1= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','!','@','#','$','&','*','%','?'];
       console.log(lengths)
@@ -86,7 +86,7 @@ function generatePassword(){
   }else if(com === "B"){
   
     var lengths = prompt("How many characters would you like to have");
-    var specialChar =  prompt("Would you like to include special characters: Y= yes N= no");
+    var specialChar =  prompt("Would you like to include special characters:\n Y= yes N= no");
     var alphabet= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     var alphabet1= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','!','@','#','$','&','*','%','?'];
     
