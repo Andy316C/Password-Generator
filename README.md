@@ -15,3 +15,8 @@ After entering all the required fields you will be given the password that you a
 <li>Enter Y to include special characters or N to not include special characters</li>
 <li>Enter Y to include capital letters or N to not include capital letters if the option is available.
 </ul>
+
+### Link
+
+Please click the link to access the Password Generator
+<a href="https://andy316c.github.io/Password-Generator/">Click here</a>
