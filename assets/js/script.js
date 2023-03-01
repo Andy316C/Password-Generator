@@ -1,12 +1,10 @@
-// Assignment Code
+// 
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-
 function generatePassword(){
-  // console.log("hello");
-  var com = prompt("Please Enter:\n L for an A-Z password OR \n N for a Numbered password OR B for Both");
-  
+
+  var com = prompt("Please Enter:\n L for an A-Z password OR \n N for a Numbered password OR\n B for Both");
+
   if(com === "L"){
     var lengths = prompt("How many letters would you like to have");
     while(!parseInt(lengths)){
@@ -16,26 +14,24 @@ function generatePassword(){
     while(lengths < 8 || lengths > 128){
     lengths= prompt("Please Enter a value Between 8 and 128");
     }
-    
     var specialChar =  prompt("Would you like to include special characters:\n Y = yes N= no");
     var upperLower = prompt("Please Enter: \nU for upper case OR \nL for lower case OR B for both");
     var alphabet= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     var alphabet1= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','!','@','#','$','&','*','%','?'];
-      // console.log(lengths)
-        var alpw="";
-        var pw=0;
-        for( var i=0;i < lengths; i++){
-          if(specialChar === "Y"){
-              pw= Math.floor(Math.random() * alphabet1.length);
-              if(upperLower === "U"){
-                  alpw += alphabet1[pw].toUpperCase();
-              }else if(upperLower == "B"){
-                  if(i % 2){
+    var alpw="";
+    var pw=0;
+      for( var i=0;i < lengths; i++){
+        if(specialChar === "Y"){
+            pw= Math.floor(Math.random() * alphabet1.length);
+            if(upperLower === "U"){
+                alpw += alphabet1[pw].toUpperCase();
+            }else if(upperLower == "B"){
+                if(i % 2){
                   alpw += alphabet1[pw].toUpperCase();
                   }else{
                   alpw += alphabet1[pw];
                   }
-              }else{
+                }else{
                 alpw += alphabet1[pw];
               }
           }else{
@@ -69,7 +65,6 @@ function generatePassword(){
       }
       var specialChar =  prompt("Would you like to include special characters with your numbers:\n Y= Yes N= No \n Default is No unless specified");
       var alphabet1= ['!','@','#','$','&','*','%','?','_',"+"];
-        // console.log(lengths)
           var alpw="";
           for( var i=0;i < lengths; i++){
             var pw= Math.floor(Math.random() * 10);
@@ -86,7 +81,6 @@ function generatePassword(){
           }
           console.log(alpw);
           return alpw;
-
   }else if(com === "B"){
   
     var lengths = prompt("How many characters would you like to have");
@@ -108,7 +102,7 @@ function generatePassword(){
           var pw  = Math.floor(Math.random() * 10);
           var pw1 = Math.floor(Math.random() * alphabet.length);
           var pw2 = Math.floor(Math.random() * alphabet1.length);
-          // console.log(alphabet[pw1]);
+          
           if(specialChar === "Y"){
             if(i % 2){
               var stringNum= alphabet1[pw2];
@@ -128,8 +122,6 @@ function generatePassword(){
         return alpw;
   }
 }
-
-// Add event listener to generate button
 
 function writePassword() {
   var password = generatePassword();
