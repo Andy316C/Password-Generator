@@ -4,9 +4,6 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
 
   var com = prompt("Please Enter:\n L for an A-Z password OR \n N for a Numbered password OR\n B for Both");
-  if(com !== "L" || com !== "N" || com == !"B"){
-      com = prompt("You have not selected an option:\nPlease Enter:\n L for an A-Z password OR \n N for a Numbered password OR\n B for Both");
-  }
   if(com === "L"){
     var lengths = prompt("How many letters would you like to have");
     while(!parseInt(lengths)){
